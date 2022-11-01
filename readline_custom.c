@@ -62,7 +62,6 @@ signed char prompt_quit(char *prompt) {
 		}
 		
 		/* CHECK FOR OVERFLOW, this should be the first check in this function that doesn't exit entire program (besides EOF check) */
-		/* if what user enters reaches (input_size_temp - 3) without newline, count as overflow, flush stdin and ask again */
 		newline_position = memchr(quit_prompt_input,'\n',QUIT_PROMPT_RESULT_SIZE - 2);
 		if(!newline_position) {
 			/* flush stdin */

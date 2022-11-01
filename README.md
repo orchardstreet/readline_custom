@@ -21,6 +21,8 @@ Readline_custom ignores and removes overflow when present, asking the user to en
 
 The function only allows characters a-z (can be changed easily), and doesn't accept null characters as part of a user response string
 
+The function returns either EXIT_PROGRAM or SUCCESS.  If EXIT_PROGRAM is returned, exit() should be called.
+
 #### signed char prompt_quit(char *prompt)
 
 This is a quit prompt that readline_custom uses, but you can use it directly easily

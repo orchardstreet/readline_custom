@@ -1,9 +1,9 @@
 # readline_custom
 A custom version of readline and without malloc
 
-###The function
+### The function
 
-####signed char readline_custom(char *prompt,char *input, size_t input_size_temp,size_t *result_string_length)
+#### signed char readline_custom(char *prompt,char *input, size_t input_size_temp,size_t *result_string_length)
 
 'prompt' should be a null terminated prompt string, eg ("Enter your name: ")
 

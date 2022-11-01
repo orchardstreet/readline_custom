@@ -19,13 +19,13 @@ While being prompted for input, a user can quit through ctl+D, 'q', or 'quit'.
 
 Readline_custom ignores and removes overflow when present, asking the user to enter again.
 
-The function only allows characters a-z (can be changed easily), and doesn't accept null bytes as part of a user response string
+The function only allows characters a-z (can be changed easily), and doesn't accept null characters as part of a user response string
 
 #### signed char prompt_quit(char *prompt)
 
 This is a quit prompt that readline_custom uses, but you can use it directly easily
 
-'prompt' should be a null terminated prompt string, eg ("Do you want to quit: ")
+'prompt' should be a null-character-terminated prompt string, eg ("Do you want to quit: ")
 
 The function loops until a user enters ctl+d, 'yes', 'y', 'n' or 'no', and returns an exit code as appropriate
 

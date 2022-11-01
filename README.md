@@ -26,3 +26,12 @@ This is a quit prompt that readline_custom uses, but you can use it directly eas
 The function loops until a user enters ctl+d, 'yes', 'y', 'n' or 'no', and returns an exit code as appropriate
 
 The function returns either EXIT_PROGRAM, YES, or NO.  You should handle all three exit codes if you use this function.  
+
+### To compile
+add 
+
+```
+#include "headers/readline_custom.h" 
+```
+
+to your the file in your program that will use the function.  Then compile your program as normally, but also adding the readline_custom.c file

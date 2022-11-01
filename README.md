@@ -23,4 +23,6 @@ This is a quit prompt that readline_custom uses, but you can use it directly eas
 
 'prompt' should be a null terminated prompt string, eg ("Do you want to quit: ")
 
-The function returns either EXIT_PROGRAM, YES, or NO.  You should handle all three exit codes if you use this function
+The function loops until a user enters ctl+d, 'yes', 'y', 'n' or 'no', and returns an exit code as appropriate
+
+The function returns either EXIT_PROGRAM, YES, or NO.  You should handle all three exit codes if you use this function.  

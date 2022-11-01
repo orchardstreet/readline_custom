@@ -1,7 +1,7 @@
 # readline_custom
 A custom version of readline and without malloc
 
-### The function
+### The functions
 
 #### signed char readline_custom(char *prompt, char *input, size_t input_size_temp, size_t *result_string_length)
 
@@ -16,3 +16,11 @@ A custom version of readline and without malloc
 A user can quit through ctl+D, 'q', or 'quit'.  The function ignores and removes overflow when present, asking the user to enter again.
 
 The function only allows characters a-z (can be changed easily), and doesn't accept null bytes as part of a user response string
+
+#### signed char prompt_quit(char *prompt)
+
+This is a quit prompt that readline_custom uses, but you can use it directly easily
+
+'prompt' should be a null terminated prompt string, eg ("Do you want to quit: ")
+
+The function returns either EXIT_PROGRAM, YES, or NO.  You should handle all three exit codes if you use this function

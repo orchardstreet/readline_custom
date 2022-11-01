@@ -1,7 +1,7 @@
 # readline_custom
 A custom (from scratch) version of GNU's readline() and without malloc
 
-basically an elaborate 2 function wrapper for fgets()
+basically an elaborate, 2 function wrapper for fgets()
 
 ### The functions
 

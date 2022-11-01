@@ -26,9 +26,11 @@ signed char flush_stdin(void) {
 signed char prompt_quit(char *prompt) {
 	/* Asks user if he wants to quit or not
          * returns YES on "yes", NO on "no, and EXIT_PROGRAM if the program should exit 
-	 * Attempts to read from stdin to memory, until a valid input is given. * Asks user again on no valid input, no input, or on overflow * This program also flushes stdin on overflow. * This function deals with pecularities of stdin redirect input, in case
+	 * Attempts to read from stdin to memory, until a valid input is given. 
+	 * Asks user again on no valid input, no input, or on overflow 
+	 * This program also flushes stdin on overflow. 
+	 * This function deals with pecularities of stdin redirect input, in case
 	 * someone is automating the program with stdin redirect.
-	 * RETURN VALUES: uses the exit_codes enum, which is self-explanatory */
 	
 	char *newline_position;
 	char *browse_input;

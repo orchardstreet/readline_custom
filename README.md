@@ -9,7 +9,7 @@ A custom version of readline and without malloc
 
 'input' is the buffer your input goes into, it should be input_size_temp bytes large 
 
-'input_size_temp' can be 4 bytes to sizeof(size_t) bytes large. It uses 3 bytes for padding. So if input_size_temp is 10, then a user can enter max 7 characters
+'input_size_temp' can a value of 4 to sizeof(size_t). It uses 3 bytes for padding. So if input_size_temp is 10, then a user can enter max 7 characters
 
 'result_string_length' is a pointer to a size_t variable which will contain the length of the string that was input
 

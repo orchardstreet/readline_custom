@@ -30,7 +30,7 @@ signed char prompt_quit(char *prompt) {
 	 * Asks user again on no valid input, no input, or on overflow 
 	 * This program also flushes stdin on overflow. 
 	 * This function deals with pecularities of stdin redirect input, in case
-	 * someone is automating the program with stdin redirect.
+	 * someone is automating the program with stdin redirect. */
 	
 	char *newline_position;
 	char *browse_input;
@@ -180,7 +180,7 @@ signed char readline_custom(char *prompt,char *input, size_t input_size_temp,siz
 			/* flush stdin */
 			retval = flush_stdin();
 			if (retval == CONTINUE) {
-				printf("Cannot enter more than %zu characters, try again\n",input_size_temp);
+				printf("Cannot enter more than %zu characters, try again\n",input_size_temp - 3);
 				continue;
 			} else if (retval == EOF_SEEN) {
 				retval = prompt_quit("Are you sure you want to quit? (y)es/(n)o: ");

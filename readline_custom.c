@@ -40,6 +40,7 @@ signed char prompt_quit(char *prompt) {
 	for(;;) {
 		
 		printf("%s",prompt);	
+		fflush(stdout);
 		/* Using memset here in case there's a funky fgets implementation that errors out after
 		 * detecting EOF and partially reads into buffer.  Or one that doesn't error
 		 * out after detecting EOF, but also doesn't insert a null character.
@@ -147,6 +148,7 @@ signed char readline_custom(char *prompt,char *input, size_t input_size_temp,siz
 	for(;;) {
 		
 		printf("%s",prompt);
+		fflush(stdout);
 		
 		/* Using memset here in case there's a funky fgets implementation that errors out after
 		 * detecting EOF and partially reads into buffer.  Or one that doesn't error
